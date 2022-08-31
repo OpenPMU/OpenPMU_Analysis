@@ -3,7 +3,12 @@ A set of tools which helps analysis the synchrophasor and CPOW data produced by 
 
 The tools contained in this repository are intended for the file formats produced by OpenPMU V2 devices, but may prove useful for analysis of data from other PMUs which follow a similar file format and data structure.
 
-## Note on Time
+## Tools
+
+* **Multi-CSV Plotter:**  Allows multiple files of synchrophasors recorded in CSV format to be concatenated and plotted.
+* **Multi-CPOW Plotter:**  Allows multiple time synchronised CPOW sampled value waveform files to be concatenated and plotted.
+
+### Note on Time
 
 All times are in UTC.  
 
