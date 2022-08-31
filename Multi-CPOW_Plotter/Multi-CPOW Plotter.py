@@ -43,11 +43,11 @@ import pandas as pd
 from datetime import datetime, timedelta
 import matplotlib.pyplot as plt
 
-cpowPath = "C:\\2022-08-29\\2022-08-29_CPOW\\"
+cpowPath = "C:\\Users\\David\\Desktop\\2022-08-26\\Test\\"
 
 
-bigCPOW = np.empty(0)   # Initialise an empty array to append new CPOW sampled value data to
 startTime = None        # Initialise an empty startTime
+firstRun = True         # Used to initialise bigCPOW
 
 # Parse through all the CPOW files in the given path
 for cpowFilePath in glob.glob(cpowPath + "*"):
@@ -60,7 +60,11 @@ for cpowFilePath in glob.glob(cpowPath + "*"):
     
     cpowData, sampleRate = sf.read(cpowFilePath)    # Read CPOW data from audio file
     
-    bigCPOW = np.append(bigCPOW, cpowData)          # Append CPOW data to "bigCPOW" array
+    if firstRun:
+        bigCPOW = cpowData
+        firstRun = False
+    else:
+        bigCPOW = np.append(bigCPOW, cpowData, axis=0)          # Append CPOW data to "bigCPOW" array
    
 
 # Calculate duration of CPOW data
