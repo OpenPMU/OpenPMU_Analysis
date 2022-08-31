@@ -43,7 +43,7 @@ import pandas as pd
 from datetime import datetime, timedelta
 import matplotlib.pyplot as plt
 
-cpowPath = "C:\\Users\\David\\Desktop\\2022-08-26\\Test\\"
+cpowPath = "C:\\2022-08-26\\CPOW\\"
 
 
 startTime = None        # Initialise an empty startTime
