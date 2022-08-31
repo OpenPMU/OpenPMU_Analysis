@@ -13,7 +13,6 @@ Usage:
 The code will produce a large array of the CPOW sampled value data called 
 "bigCPOW".  May contain more than one waveform.
 
-To-do:
--------
-Since Python's "datetime" objects are limited to microsecond resolution, 
-need to investigate better solution for time-axis (e.g. Pandas datetime).
+Since the Python datetime object is limited to microsecond resolution, 
+it is necessary to use the Pandas datetime to plot sampled values with 
+the required resolution.
