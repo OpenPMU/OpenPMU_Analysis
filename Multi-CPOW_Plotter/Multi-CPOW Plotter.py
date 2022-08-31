@@ -31,15 +31,15 @@ Usage:
 The code will produce a large array of the CPOW sampled value data called 
 "bigCPOW".  May contain more than one waveform.
 
-To-do:
--------
-Since Python's "datetime" objects are limited to microsecond resolution, 
-need to investigate better solution for time-axis (e.g. Pandas datetime).
+Since the Python datetime object is limited to microsecond resolution, 
+it is necessary to use the Pandas datetime to plot sampled values with 
+the required resolution.
 """
 
 import glob
 import soundfile as sf
 import numpy as np
+import pandas as pd
 from datetime import datetime, timedelta
 import matplotlib.pyplot as plt
 
@@ -73,11 +73,12 @@ print("END Time:            ", endTime)
 
 
 # Prepare a time axis for plotting data
-timeAxis = np.arange(0, duration, (1.0/sampleRate))
+timeAxis = np.arange(0, duration, (1.0/sampleRate))             # Time starts at "0"
+timeAxisPD = pd.date_range(startTime, endTime, len(bigCPOW))    # Time starts at "startTime" and uses Pandas datetime object
 
 # Example plotting function
 plt.figure(1)
-plt.plot(timeAxis, bigCPOW)
+plt.plot(timeAxisPD, bigCPOW)
 plt.grid(True)
 plt.show()
     
