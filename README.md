@@ -7,6 +7,7 @@ The tools contained in this repository are intended for the file formats produce
 
 * **Multi-CSV Plotter:**  Allows multiple files of synchrophasors recorded in CSV format to be concatenated and plotted.
 * **Multi-CPOW Plotter:**  Allows multiple time synchronised CPOW sampled value waveform files to be concatenated and plotted.
+* **TSSV Data Selector:**  Allows selection of small sections TSSV data from OpenPMU's continuous recording of TSSV data.
 
 ### Note on Time
 
