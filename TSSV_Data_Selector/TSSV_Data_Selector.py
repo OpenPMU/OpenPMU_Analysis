@@ -1,3 +1,36 @@
+# -*- coding: utf-8 -*-
+"""
+OpenPMU - TSSV Data Selector
+Copyright (C) 2024  www.OpenPMU.org
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+"""
+
+"""
+Time Synchronised Sampled Value (TSSV) Data Selector
+TSSV Data Selector is intended for use of continuous TSSV files 
+produced by OpenPMU devices. It will also work on such files 
+produced by other devices using the same TSSV file format and 
+data structure (i.e. WAVE and FLAC).
+
+Usage:
+
+- Place all the files to be plotted in one directory with no other files.
+- Set "start_time" and "duration_ms"
+- Run code
+"""
+
 import soundfile as sf
 from datetime import datetime, timedelta
 import numpy as np
